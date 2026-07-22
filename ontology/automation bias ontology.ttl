@@ -1,0 +1,308 @@
+@prefix : <https://w3id.org/abo#> .
+@prefix abo: <https://w3id.org/abo#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/abo#> .
+
+<https://w3id.org/abo#> rdf:type owl:Ontology ;
+                         owl:imports <http://promsns.org/def/decprov> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/ns/prov#endedAtTime
+<http://www.w3.org/ns/prov#endedAtTime> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#startedAtTime
+<http://www.w3.org/ns/prov#startedAtTime> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.w3.org/ns/prov#agent
+<http://www.w3.org/ns/prov#agent> rdfs:domain abo:HumanOperatorContext ;
+                                  rdfs:range abo:HumanOperator .
+
+
+###  http://www.w3.org/ns/prov#entity
+<http://www.w3.org/ns/prov#entity> rdfs:domain abo:HumanInteraction ;
+                                   rdfs:range abo:InformationArtifact .
+
+
+###  http://www.w3.org/ns/prov#qualifiedAssociation
+<http://www.w3.org/ns/prov#qualifiedAssociation> rdfs:domain abo:HumanOversightActivity ;
+                                                 rdfs:range abo:HumanOperatorContext .
+
+
+###  http://www.w3.org/ns/prov#qualifiedUsage
+<http://www.w3.org/ns/prov#qualifiedUsage> rdfs:domain abo:HumanOversightActivity ;
+                                           rdfs:range abo:HumanInteraction .
+
+
+###  http://www.w3.org/ns/prov#wasAttributedTo
+<http://www.w3.org/ns/prov#wasAttributedTo> rdfs:domain abo:AIOutput ;
+                                            rdfs:range abo:AIModel .
+
+
+###  http://www.w3.org/ns/prov#wasGeneratedBy
+<http://www.w3.org/ns/prov#wasGeneratedBy> rdfs:domain abo:OversightResult ;
+                                           rdfs:range abo:HumanOversightActivity .
+
+
+###  https://w3id.org/abo#hadEnvironment
+abo:hadEnvironment rdf:type owl:ObjectProperty ;
+                   rdfs:domain abo:HumanOperatorContext ;
+                   rdfs:range abo:EnvironmentalFactor .
+
+
+###  https://w3id.org/abo#hadInteractionEvidence
+abo:hadInteractionEvidence rdf:type owl:ObjectProperty ;
+                           rdfs:domain abo:HumanInteraction ;
+                           rdfs:range abo:InteractionEvidence .
+
+
+###  https://w3id.org/abo#hadPerformanceMetrics
+abo:hadPerformanceMetrics rdf:type owl:ObjectProperty ;
+                          rdfs:domain abo:AIModel ;
+                          rdfs:range abo:PerformanceMetric .
+
+
+###  https://w3id.org/abo#hadProfile
+abo:hadProfile rdf:type owl:ObjectProperty ;
+               rdfs:domain abo:HumanOperatorContext ;
+               rdfs:range abo:OperatorProfile .
+
+
+###  https://w3id.org/abo#hadTaskComplexity
+abo:hadTaskComplexity rdf:type owl:ObjectProperty ;
+                      rdfs:domain abo:AISystemTask ;
+                      rdfs:range abo:TaskComplexity .
+
+
+###  https://w3id.org/abo#hadTaskInformation
+abo:hadTaskInformation rdf:type owl:ObjectProperty ;
+                       rdfs:domain abo:AISystemTask ;
+                       rdfs:range abo:InformationArtifact .
+
+
+###  https://w3id.org/abo#wasOversightOf
+abo:wasOversightOf rdf:type owl:ObjectProperty ;
+                   rdfs:domain abo:HumanOversightActivity ;
+                   rdfs:range abo:AISystemTask .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.w3.org/ns/prov#endedAtTime
+<http://www.w3.org/ns/prov#endedAtTime> rdfs:domain abo:HumanOversightActivity .
+
+
+###  http://www.w3.org/ns/prov#startedAtTime
+<http://www.w3.org/ns/prov#startedAtTime> rdfs:domain abo:HumanOversightActivity .
+
+
+###  https://w3id.org/abo#hasAILiteracyScore
+abo:hasAILiteracyScore rdf:type owl:DatatypeProperty ;
+                       rdfs:domain abo:HumanOperator ;
+                       rdfs:range xsd:decimal .
+
+
+###  https://w3id.org/abo#hasDuration
+abo:hasDuration rdf:type owl:DatatypeProperty ;
+                rdfs:domain abo:InteractionEvidence ;
+                rdfs:range xsd:decimal .
+
+
+###  https://w3id.org/abo#hasEvidenceID
+abo:hasEvidenceID rdf:type owl:DatatypeProperty ;
+                  rdfs:domain abo:InteractionEvidence ;
+                  rdfs:range xsd:string .
+
+
+###  https://w3id.org/abo#hasExperience
+abo:hasExperience rdf:type owl:DatatypeProperty ;
+                  rdfs:domain abo:HumanOperator ;
+                  rdfs:range xsd:decimal .
+
+
+###  https://w3id.org/abo#hasExplanation
+abo:hasExplanation rdf:type owl:DatatypeProperty ;
+                   rdfs:domain abo:AIExplanation ;
+                   rdfs:range rdfs:Literal .
+
+
+###  https://w3id.org/abo#hasFileReference
+abo:hasFileReference rdf:type owl:DatatypeProperty ;
+                     rdfs:domain abo:InteractionEvidence ;
+                     rdfs:range xsd:string .
+
+
+###  https://w3id.org/abo#hasFileSource
+abo:hasFileSource rdf:type owl:DatatypeProperty ;
+                  rdfs:domain abo:InteractionEvidence ;
+                  rdfs:range xsd:string .
+
+
+###  https://w3id.org/abo#hasMeasurementUnit
+abo:hasMeasurementUnit rdf:type owl:DatatypeProperty ;
+                       rdfs:domain abo:Workload ;
+                       rdfs:range xsd:string .
+
+
+###  https://w3id.org/abo#hasMeasurementValue
+abo:hasMeasurementValue rdf:type owl:DatatypeProperty ;
+                        rdfs:domain abo:Workload ;
+                        rdfs:range xsd:float .
+
+
+###  https://w3id.org/abo#hasMetricName
+abo:hasMetricName rdf:type owl:DatatypeProperty ;
+                  rdfs:domain abo:PerformanceMetric ;
+                  rdfs:range xsd:string .
+
+
+###  https://w3id.org/abo#hasMetricUnit
+abo:hasMetricUnit rdf:type owl:DatatypeProperty ;
+                  rdfs:domain abo:PerformanceMetric ;
+                  rdfs:range xsd:string .
+
+
+###  https://w3id.org/abo#hasMetricValue
+abo:hasMetricValue rdf:type owl:DatatypeProperty ;
+                   rdfs:domain abo:PerformanceMetric ;
+                   rdfs:range xsd:float .
+
+
+###  https://w3id.org/abo#hasModelName
+abo:hasModelName rdf:type owl:DatatypeProperty ;
+                 rdfs:domain abo:AIModel ;
+                 rdfs:range xsd:string .
+
+
+###  https://w3id.org/abo#hasModelVersion
+abo:hasModelVersion rdf:type owl:DatatypeProperty ;
+                    rdfs:domain abo:AIModel ;
+                    rdfs:range xsd:string .
+
+
+###  https://w3id.org/abo#hasRecommendationValue
+abo:hasRecommendationValue rdf:type owl:DatatypeProperty ;
+                           rdfs:domain abo:AIRecommendation ;
+                           rdfs:range rdfs:Literal .
+
+
+###  https://w3id.org/abo#hasRole
+abo:hasRole rdf:type owl:DatatypeProperty ;
+            rdfs:domain abo:HumanOperator ;
+            rdfs:range xsd:string .
+
+
+###  https://w3id.org/abo#hasTaskID
+abo:hasTaskID rdf:type owl:DatatypeProperty ;
+              rdfs:domain abo:AISystemTask ;
+              rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/abo#AIExplanation
+abo:AIExplanation rdf:type owl:Class ;
+                  rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ,
+                                  abo:AIOutput .
+
+
+###  https://w3id.org/abo#AIModel
+abo:AIModel rdf:type owl:Class ;
+            rdfs:subClassOf <http://www.w3.org/ns/prov#SoftwareAgent> .
+
+
+###  https://w3id.org/abo#AIOutput
+abo:AIOutput rdf:type owl:Class ;
+             rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> .
+
+
+###  https://w3id.org/abo#AIRecommendation
+abo:AIRecommendation rdf:type owl:Class ;
+                     rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ,
+                                     abo:AIOutput .
+
+
+###  https://w3id.org/abo#AISystemTask
+abo:AISystemTask rdf:type owl:Class ;
+                 rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> .
+
+
+###  https://w3id.org/abo#EnvironmentalFactor
+abo:EnvironmentalFactor rdf:type owl:Class ;
+                        rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> .
+
+
+###  https://w3id.org/abo#HumanInteraction
+abo:HumanInteraction rdf:type owl:Class ;
+                     rdfs:subClassOf <http://www.w3.org/ns/prov#Usage> .
+
+
+###  https://w3id.org/abo#HumanOperator
+abo:HumanOperator rdf:type owl:Class ;
+                  rdfs:subClassOf <http://www.w3.org/ns/prov#Person> .
+
+
+###  https://w3id.org/abo#HumanOperatorContext
+abo:HumanOperatorContext rdf:type owl:Class ;
+                         rdfs:subClassOf <http://www.w3.org/ns/prov#Association> .
+
+
+###  https://w3id.org/abo#HumanOversightActivity
+abo:HumanOversightActivity rdf:type owl:Class ;
+                           rdfs:subClassOf <http://www.w3.org/ns/prov#Activity> .
+
+
+###  https://w3id.org/abo#InformationArtifact
+abo:InformationArtifact rdf:type owl:Class ;
+                        rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> .
+
+
+###  https://w3id.org/abo#InteractionEvidence
+abo:InteractionEvidence rdf:type owl:Class ;
+                        rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> .
+
+
+###  https://w3id.org/abo#OperatorProfile
+abo:OperatorProfile rdf:type owl:Class ;
+                    rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> .
+
+
+###  https://w3id.org/abo#OversightResult
+abo:OversightResult rdf:type owl:Class ;
+                    rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> .
+
+
+###  https://w3id.org/abo#PerformanceMetric
+abo:PerformanceMetric rdf:type owl:Class ;
+                      rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> .
+
+
+###  https://w3id.org/abo#TaskComplexity
+abo:TaskComplexity rdf:type owl:Class ;
+                   rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ,
+                                   abo:EnvironmentalFactor .
+
+
+###  https://w3id.org/abo#Workload
+abo:Workload rdf:type owl:Class ;
+             rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ,
+                             abo:EnvironmentalFactor .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
