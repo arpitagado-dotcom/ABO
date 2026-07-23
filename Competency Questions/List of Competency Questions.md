@@ -7,17 +7,12 @@ The questions are grouped into three categories:
 - Environmental Context
 - Agent Profile
 
-| ID | Category | Competency Question |
-|---|---|---|
-| CQ1 | AI Model and System | What AI output was provided to the human operator as part of the human oversight process? |
-| CQ2 | AI Model and System | What AI model version produced this AI output? |
-| CQ3 | AI Model and System | What explanation was provided by the AI system for this AI output during this human oversight process? |
-| CQ4 | AI Model and System | What were the performance metrics of the AI model that produced this AI output? |
-| CQ5 | Environmental Context | What was the operator's workload at the time of this human oversight decision? |
-| CQ6 | Environmental Context | What information did the operator access during the process that produced this human oversight decision? |
-| CQ7 | Environmental Context | What was the complexity of the task during this human oversight process? |
-| CQ8 | Environmental Context | What was the complexity of the task during this human oversight process? |
-| CQ9 | Agent Profile | What was the human oversight decision of the operator for this AI output? |
-| CQ10 | Agent Profile | What was the operator's level of expertise during this human oversight process? |
-| CQ11 | Agent Profile | What was the operator's AI literacy score during this human oversight process? |
-| CQ12 | Agent Profile | What was the duration the operator spent on this human oversight process? |
+
+CQ1: What AI output was provided to the human operator as part of the human oversight process?
+
+Key Concepts: 
+- abo:HumanOversightActivity
+- abo:HumanOperator
+- abo:AIRecommendation
+- abo:wasOversightOf
+- prov:agent
