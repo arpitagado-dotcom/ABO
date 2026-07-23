@@ -16,7 +16,8 @@ The questions are grouped into three categories:
 | CQ5 | Environmental Context | What was the operator's workload at the time of this human oversight decision? |
 | CQ6 | Environmental Context | What information did the operator access during the process that produced this human oversight decision? |
 | CQ7 | Environmental Context | What was the complexity of the task during this human oversight process? |
-| CQ8 | Agent Profile | What was the human oversight decision of the operator for this AI output? |
-| CQ9 | Agent Profile | What was the operator's level of expertise during this human oversight process? |
-| CQ10 | Agent Profile | What was the operator's AI literacy score during this human oversight process? |
-| CQ11 | Agent Profile | What was the duration the operator spent on this human oversight process? |
+| CQ8 | Environmental Context | What was the complexity of the task during this human oversight process? |
+| CQ9 | Agent Profile | What was the human oversight decision of the operator for this AI output? |
+| CQ10 | Agent Profile | What was the operator's level of expertise during this human oversight process? |
+| CQ11 | Agent Profile | What was the operator's AI literacy score during this human oversight process? |
+| CQ12 | Agent Profile | What was the duration the operator spent on this human oversight process? |
