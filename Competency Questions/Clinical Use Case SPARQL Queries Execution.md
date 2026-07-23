@@ -173,6 +173,8 @@ SELECT ?activity ?taskComplexityValue ?taskComplexityMeasurementUnit WHERE {
 | [https://w3id.org/abo#OversightActivity_Case2](https://w3id.org/abo#OversightActivity_Case2) | "D" | "BI RADS" |
 | [https://w3id.org/abo#OversightActivity_Case3](https://w3id.org/abo#OversightActivity_Case3) | "D" | "BI RADS" |
 
+# Agent Profile
+
 ## CQ8: Which human operators were associated with this task?
 
 ```sparql
@@ -198,9 +200,8 @@ SELECT DISTINCT ?taskID ?operator ?role WHERE {
 | "Alice123" | [https://w3id.org/abo#Operator_DrJay](https://w3id.org/abo#Operator_DrJay) | "Senior Radiologist" |
 
 
-# Agent Profile
 
-## CQ9: What was the human oversight decision of th3 human operator for this AI output?
+## CQ9: What was the human oversight decision of the human operator for this AI output?
 ```sparql
 PREFIX abo:  [https://w3id.org/abo#](https://w3id.org/abo#)
 PREFIX prov: [http://www.w3.org/ns/prov#](http://www.w3.org/ns/prov#)
@@ -220,4 +221,8 @@ SELECT ?activity ?oversightDecision ?oversightDecisionNote WHERE {
 | [https://w3id.org/abo#OversightActivity_Case2](https://w3id.org/abo#OversightActivity_Case2) | "BI RADS 4" | "Stereotactic biopsy recommended" |
 | [https://w3id.org/abo#OversightActivity_Case3](https://w3id.org/abo#OversightActivity_Case3) | "BI RADS 4" | "Stereotactic biopsy recommended" |
 
-## CQ10:  
+## CQ10: What was this operator’s level of expertise during this human oversight process?  
+
+## CQ11: What was this operator’s AI literacy score during this human oversight process?
+
+## CQ12: What was the duration this human operator spent on this human oversight process?
