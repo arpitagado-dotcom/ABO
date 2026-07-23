@@ -28,7 +28,6 @@ Arpita Gado: a.gado.25@abdn.ac.uk
 
 ## Acknowledgements 
 
-Automation Bias Ontology is being developed as part of a research project at the Interdisciplinary Institute, University of Aberdeen. 
-
+Automation Bias Ontology is being developed as part of a research project at the Interdisciplinary Institute, University of Aberdeen. The project is supervised by Dr Milan Markovic 
 ## License 
 
