@@ -1,4 +1,4 @@
-# Automation-Bias-Ontology-
+# ABO: Automation-Bias-Ontology
 The Automation Bias Ontology (ABO) is an ontology for representing contextual information surrounding human oversight decisions in AI-assisted decision-making systems. ABO extends the W3C PROV Ontology (PROV-O) to capture provenance information related to human operators, AI systems, decisions, and the operational context in which decisions are made.
 
 The ontology aims to support the assessment of potential automation bias by enabling structured representation of observable contextual evidence associated with human-AI decision-making processes.
