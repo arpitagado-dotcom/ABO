@@ -30,5 +30,5 @@ Arpita Gado: a.gado.25@abdn.ac.uk
 
 Automation Bias Ontology is being developed as part of a research project at the Interdisciplinary Institute, University of Aberdeen. 
 
-# License 
+## License 
 
