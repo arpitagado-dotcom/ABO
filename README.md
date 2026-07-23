@@ -4,7 +4,7 @@ The Automation Bias Ontology (ABO) is an ontology for representing contextual in
 The ontology aims to support the assessment of potential automation bias by enabling structured representation of observable contextual evidence associated with human-AI decision-making processes.
 
  #### Namespace: https://w3id.org/abo#
- #### Version: v0.1
+ #### Version: v1.0
 
 ## Motivation
 
