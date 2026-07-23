@@ -1,0 +1,170 @@
+<https://w3id.org/abo#hasDuration> <http://www.w3.org/2000/01/rdf-schema#label> "has duration"@en .
+<http://www.w3.org/ns/prov#qualifiedAssociation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/abo#HumanOversightActivity> .
+<https://w3id.org/abo#InformationArtifact> <http://www.w3.org/2000/01/rdf-schema#label> "information artifact"@en .
+<https://w3id.org/abo#hadProfile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/prov#agent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/abo#HumanOperatorContext> .
+<https://w3id.org/abo#HumanOperator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/abo#hasExplanation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/abo#hasMetricUnit> <http://www.w3.org/2000/01/rdf-schema#label> "has metric unit"@en .
+<https://w3id.org/abo#wasOversightOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/abo#hasModelName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/abo#hasMeasurementUnit> <http://www.w3.org/2000/01/rdf-schema#label> "has measurement unit"@en .
+<https://w3id.org/abo#Workload> <http://www.w3.org/2000/01/rdf-schema#label> "workload"@en .
+<https://w3id.org/abo#HumanInteraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/abo#hasAILiteracyScore> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/abo#HumanOperator> .
+<https://w3id.org/abo#HumanOversightActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/abo#hasEvidenceID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/abo#hasRecommendationValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/abo#AIRecommendation> .
+<https://w3id.org/abo#OperatorProfile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/abo#hadTaskInformation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/abo#AISystemTask> .
+<https://w3id.org/abo#hasTaskID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/abo#hasRecommendationValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/abo#TaskComplexity> <http://www.w3.org/2000/01/rdf-schema#label> "task complexity"@en .
+<https://w3id.org/abo#hadTaskComplexity> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/abo#TaskComplexity> .
+<http://www.w3.org/ns/prov#qualifiedUsage> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/abo#HumanInteraction> .
+<https://w3id.org/abo#wasOversightOf> <http://www.w3.org/2000/01/rdf-schema#label> "was oversight of"@en .
+<https://w3id.org/abo#hasMetricName> <http://www.w3.org/2000/01/rdf-schema#label> "has metric name"@en .
+<http://www.w3.org/ns/prov#qualifiedUsage> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/abo#HumanOversightActivity> .
+<https://w3id.org/abo#hadPerformanceMetrics> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/abo#AIModel> .
+<https://w3id.org/abo#hasMeasurementUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/abo#hasMeasurementValue> <http://www.w3.org/2000/01/rdf-schema#label> "has measurement value"@en .
+<https://w3id.org/abo#PerformanceMetric> <http://www.w3.org/2000/01/rdf-schema#label> "performance metric"@en .
+<https://w3id.org/abo#hadInteractionEvidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/abo#hasMeasurementValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/abo#Workload> .
+<https://w3id.org/abo#hasEvidenceID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/abo#HumanOversightActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
+<https://w3id.org/abo#hasMetricValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/abo#hasModelVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/abo#hasMetricName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/abo#AIModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#SoftwareAgent> .
+<https://w3id.org/abo#hasRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/abo#InteractionEvidence> <http://www.w3.org/2000/01/rdf-schema#label> "interaction evidence"@en .
+<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/abo#OversightResult> .
+<https://w3id.org/abo#hasTaskID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/abo#hadTaskInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/abo#EnvironmentalFactor> <http://www.w3.org/2000/01/rdf-schema#label> "environmental factor"@en .
+<https://w3id.org/abo#hasFileReference> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/abo#InteractionEvidence> .
+<https://w3id.org/abo#hasMeasurementUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/abo#Workload> .
+<https://w3id.org/abo#hadTaskInformation> <http://www.w3.org/2000/01/rdf-schema#label> "had task information"@en .
+<https://w3id.org/abo#hasMetricUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/abo#PerformanceMetric> .
+<https://w3id.org/abo#hasFileSource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/abo#hasRecommendationValue> <http://www.w3.org/2000/01/rdf-schema#label> "has recommendation value"@en .
+<https://w3id.org/abo#PerformanceMetric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/abo#Workload> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/abo#hasModelVersion> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/abo#AIModel> .
+<https://w3id.org/abo#InteractionEvidence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/abo#hasRole> <http://www.w3.org/2000/01/rdf-schema#label> "has role"@en .
+<https://w3id.org/abo#hadInteractionEvidence> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/abo#InteractionEvidence> .
+<https://w3id.org/abo#EnvironmentalFactor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/abo#AIExplanation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/abo#AIOutput> .
+<https://w3id.org/abo#AIOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/abo#hasMetricValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<https://w3id.org/abo#hasExplanation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/abo#AIExplanation> .
+<https://w3id.org/abo#hasAILiteracyScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/abo#hasDuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/abo#InformationArtifact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<http://www.w3.org/ns/prov#agent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/abo#HumanOperator> .
+<https://w3id.org/abo#hasExperience> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/abo#HumanOperator> .
+<https://w3id.org/abo#hasExplanation> <http://www.w3.org/2000/01/rdf-schema#label> "has explanation"@en .
+<https://w3id.org/abo#AIRecommendation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<http://www.w3.org/ns/prov#startedAtTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/abo#HumanOversightActivity> .
+<https://w3id.org/abo#AISystemTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/abo#hasExperience> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/abo#HumanOperator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Person> .
+<http://www.w3.org/ns/prov#endedAtTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/abo#HumanOversightActivity> .
+<https://w3id.org/abo#HumanInteraction> <http://www.w3.org/2000/01/rdf-schema#label> "human interaction"@en .
+<https://w3id.org/abo#hadPerformanceMetrics> <http://www.w3.org/2000/01/rdf-schema#label> "had performance metrics"@en .
+<https://w3id.org/abo#hasAILiteracyScore> <http://www.w3.org/2000/01/rdf-schema#label> "has AI literacy score"@en .
+<https://w3id.org/abo#hasMetricName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/abo#PerformanceMetric> .
+<http://www.w3.org/ns/prov#wasGeneratedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/abo#HumanOversightActivity> .
+<https://w3id.org/abo#AIRecommendation> <http://www.w3.org/2000/01/rdf-schema#label> "AI recommendation"@en .
+<http://www.w3.org/ns/prov#entity> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/abo#InformationArtifact> .
+<https://w3id.org/abo#hadEnvironment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/abo#hadProfile> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/abo#OperatorProfile> .
+<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/abo#AIOutput> .
+<https://w3id.org/abo#AIExplanation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/abo#EnvironmentalFactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/abo#Workload> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/abo#EnvironmentalFactor> .
+<https://w3id.org/abo#hasRole> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/abo#HumanOperator> .
+<https://w3id.org/abo#hasRole> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/abo#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/abo#hadTaskComplexity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/abo#AISystemTask> .
+<https://w3id.org/abo#hadEnvironment> <http://www.w3.org/2000/01/rdf-schema#label> "had environment"@en .
+<https://w3id.org/abo#TaskComplexity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/abo#hasFileReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/abo#hasTaskID> <http://www.w3.org/2000/01/rdf-schema#label> "has task ID"@en .
+<https://w3id.org/abo#hasModelVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/abo#hasMetricUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/abo#InformationArtifact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/abo#hasExperience> <http://www.w3.org/2000/01/rdf-schema#label> "has experience"@en .
+<https://w3id.org/abo#hasTaskID> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/abo#AISystemTask> .
+<https://w3id.org/abo#OperatorProfile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/abo#PerformanceMetric> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/abo#hasFileReference> <http://www.w3.org/2000/01/rdf-schema#label> "has file reference"@en .
+<https://w3id.org/abo#AIModel> <http://www.w3.org/2000/01/rdf-schema#label> "AI model"@en .
+<https://w3id.org/abo#hasFileSource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/abo#InteractionEvidence> .
+<https://w3id.org/abo#> <http://www.w3.org/2000/01/rdf-schema#label> "Automation Bias Ontology"@en .
+<https://w3id.org/abo#HumanOperatorContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/abo#hasModelName> <http://www.w3.org/2000/01/rdf-schema#label> "has model name"@en .
+<https://w3id.org/abo#hasDuration> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/abo#InteractionEvidence> .
+<https://w3id.org/abo#HumanInteraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Usage> .
+<https://w3id.org/abo#hasExplanation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/abo#hadInteractionEvidence> <http://www.w3.org/2000/01/rdf-schema#label> "had interaction evidence"@en .
+<https://w3id.org/abo#hadProfile> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/abo#HumanOperatorContext> .
+<https://w3id.org/abo#hadTaskComplexity> <http://www.w3.org/2000/01/rdf-schema#label> "had task complexity"@en .
+<https://w3id.org/abo#AIOutput> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/abo#AIExplanation> <http://www.w3.org/2000/01/rdf-schema#label> "AI explanation"@en .
+<https://w3id.org/abo#hasModelName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/prov#qualifiedAssociation> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/abo#HumanOperatorContext> .
+<https://w3id.org/abo#hasDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/abo#hadEnvironment> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/abo#EnvironmentalFactor> .
+<https://w3id.org/abo#hasFileReference> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.w3.org/ns/prov#entity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/abo#HumanInteraction> .
+<https://w3id.org/abo#AISystemTask> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/abo#hadTaskInformation> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/abo#InformationArtifact> .
+<https://w3id.org/abo#HumanOperator> <http://www.w3.org/2000/01/rdf-schema#label> "human operator"@en .
+<https://w3id.org/abo#hasRecommendationValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/abo#hasAILiteracyScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/abo#hasMeasurementValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/abo#TaskComplexity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/abo#hasEvidenceID> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/abo#InteractionEvidence> .
+<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/abo#AIModel> .
+<https://w3id.org/abo#OversightResult> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/abo#HumanOperatorContext> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Association> .
+<https://w3id.org/abo#HumanOperatorContext> <http://www.w3.org/2000/01/rdf-schema#label> "human operator context"@en .
+<https://w3id.org/abo#hasModelName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/abo#AIModel> .
+<https://w3id.org/abo#wasOversightOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/abo#HumanOversightActivity> .
+<https://w3id.org/abo#AIOutput> <http://www.w3.org/2000/01/rdf-schema#label> "AI output"@en .
+<https://w3id.org/abo#AISystemTask> <http://www.w3.org/2000/01/rdf-schema#label> "AI system task"@en .
+<https://w3id.org/abo#OversightResult> <http://www.w3.org/2000/01/rdf-schema#label> "oversight result"@en .
+<https://w3id.org/abo#Workload> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/abo#> <http://www.w3.org/2002/07/owl#imports> <http://promsns.org/def/decprov> .
+<https://w3id.org/abo#hasMeasurementUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/abo#InteractionEvidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/abo#hasEvidenceID> <http://www.w3.org/2000/01/rdf-schema#label> "has evidence ID"@en .
+<https://w3id.org/abo#hasExperience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/abo#hasMetricName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/abo#hadPerformanceMetrics> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/abo#PerformanceMetric> .
+<https://w3id.org/abo#TaskComplexity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/abo#EnvironmentalFactor> .
+<https://w3id.org/abo#hasFileSource> <http://www.w3.org/2000/01/rdf-schema#label> "has file source"@en .
+<https://w3id.org/abo#AIExplanation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
+<https://w3id.org/abo#AIRecommendation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/abo#hasModelVersion> <http://www.w3.org/2000/01/rdf-schema#label> "has model version"@en .
+<https://w3id.org/abo#hadInteractionEvidence> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/abo#HumanInteraction> .
+<http://www.w3.org/ns/prov#startedAtTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/abo#hadProfile> <http://www.w3.org/2000/01/rdf-schema#label> "had profile"@en .
+<http://www.w3.org/ns/prov#endedAtTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://w3id.org/abo#hasMetricValue> <http://www.w3.org/2000/01/rdf-schema#label> "has metric value"@en .
+<https://w3id.org/abo#hasMetricValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/abo#PerformanceMetric> .
+<https://w3id.org/abo#wasOversightOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/abo#AISystemTask> .
+<https://w3id.org/abo#OperatorProfile> <http://www.w3.org/2000/01/rdf-schema#label> "operator profile"@en .
+<https://w3id.org/abo#AIModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/abo#hadPerformanceMetrics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/abo#hadTaskComplexity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/abo#HumanOversightActivity> <http://www.w3.org/2000/01/rdf-schema#label> "human oversight activity"@en .
+<https://w3id.org/abo#hasMetricUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/abo#hasMeasurementValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<https://w3id.org/abo#OversightResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/abo#hadEnvironment> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/abo#HumanOperatorContext> .
+<https://w3id.org/abo#AIRecommendation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/abo#AIOutput> .
+<https://w3id.org/abo#hasFileSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
