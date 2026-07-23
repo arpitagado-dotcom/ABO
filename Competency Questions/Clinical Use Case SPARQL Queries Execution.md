@@ -125,7 +125,7 @@ SELECT ?activity ?operatorDecision ?aiRecommendation ?metricName ?metricValue ?m
 
 # Environmental Context
 
-# CQ5.  What was this operator’s workload at the time of this human oversight decision? 
+## CQ5.  What was this operator’s workload at the time of this human oversight decision? 
 
 ```sparql
 PREFIX abo:  [https://w3id.org/abo#]
@@ -148,10 +148,10 @@ SELECT ?activity ?measurementName ?measurementValue ?measurementUnit WHERE {
 | [https://w3id.org/abo#OversightActivity_Case2](https://w3id.org/abo#OversightActivity_Case2) | "TTR reduction" | "5.0"^^xsd:float | "%" |
 | [https://w3id.org/abo#OversightActivity_Case3](https://w3id.org/abo#OversightActivity_Case3) | "TTR increase" | "20.0"^^xsd:float | "%" |
 
-# CQ6: What information artifacts were accessed by the human operator, and what interaction evidence was recorded to support this during this human oversight process?
+## CQ6: What information artifacts were accessed by the human operator, and what interaction evidence was recorded to support this during this human oversight process?
 
 
-# CQ7: What was the complexity of the task during this human oversight process?
+## CQ7: What was the complexity of the task during this human oversight process?
 
 ```sparql
 PREFIX abo:  [https://w3id.org/abo#]
@@ -173,7 +173,7 @@ SELECT ?activity ?taskComplexityValue ?taskComplexityMeasurementUnit WHERE {
 | [https://w3id.org/abo#OversightActivity_Case2](https://w3id.org/abo#OversightActivity_Case2) | "D" | "BI RADS" |
 | [https://w3id.org/abo#OversightActivity_Case3](https://w3id.org/abo#OversightActivity_Case3) | "D" | "BI RADS" |
 
-# CQ8: Which human operators were associated with this task?
+## CQ8: Which human operators were associated with this task?
 
 ```sparql
 PREFIX abo:  [https://w3id.org/abo#]
@@ -200,7 +200,7 @@ SELECT DISTINCT ?taskID ?operator ?role WHERE {
 
 # Agent Profile
 
-## CQ9: What was the human oversight decision of this human operator for this AI output?
+## CQ9: What was the human oversight decision of th3 human operator for this AI output?
 ```sparql
 PREFIX abo:  [https://w3id.org/abo#](https://w3id.org/abo#)
 PREFIX prov: [http://www.w3.org/ns/prov#](http://www.w3.org/ns/prov#)
@@ -220,4 +220,4 @@ SELECT ?activity ?oversightDecision ?oversightDecisionNote WHERE {
 | [https://w3id.org/abo#OversightActivity_Case2](https://w3id.org/abo#OversightActivity_Case2) | "BI RADS 4" | "Stereotactic biopsy recommended" |
 | [https://w3id.org/abo#OversightActivity_Case3](https://w3id.org/abo#OversightActivity_Case3) | "BI RADS 4" | "Stereotactic biopsy recommended" |
 
-
+## CQ10:  
