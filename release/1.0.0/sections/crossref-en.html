@@ -1,0 +1,1035 @@
+<h2 id="crossreference" class="list">Cross-reference for Automation Bias Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Automation Bias Ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#AIExplanation" title="https://w3id.org/abo#AIExplanation">AI explanation</a></li>
+  <li><a href="#AIModel" title="https://w3id.org/abo#AIModel">AI model</a></li>
+  <li><a href="#AIOutput" title="https://w3id.org/abo#AIOutput">AI output</a></li>
+  <li><a href="#AIRecommendation" title="https://w3id.org/abo#AIRecommendation">AI recommendation</a></li>
+  <li><a href="#AISystemTask" title="https://w3id.org/abo#AISystemTask">AI system task</a></li>
+  <li><a href="#EnvironmentalFactor" title="https://w3id.org/abo#EnvironmentalFactor">environmental factor</a></li>
+  <li><a href="#HumanInteraction" title="https://w3id.org/abo#HumanInteraction">human interaction</a></li>
+  <li><a href="#HumanOperator" title="https://w3id.org/abo#HumanOperator">human operator</a></li>
+  <li><a href="#HumanOperatorContext" title="https://w3id.org/abo#HumanOperatorContext">human operator context</a></li>
+  <li><a href="#HumanOversightActivity" title="https://w3id.org/abo#HumanOversightActivity">human oversight activity</a></li>
+  <li><a href="#InformationArtifact" title="https://w3id.org/abo#InformationArtifact">information artifact</a></li>
+  <li><a href="#InteractionEvidence" title="https://w3id.org/abo#InteractionEvidence">interaction evidence</a></li>
+  <li><a href="#OperatorProfile" title="https://w3id.org/abo#OperatorProfile">operator profile</a></li>
+  <li><a href="#OversightResult" title="https://w3id.org/abo#OversightResult">oversight result</a></li>
+  <li><a href="#PerformanceMetric" title="https://w3id.org/abo#PerformanceMetric">performance metric</a></li>
+  <li><a href="#TaskComplexity" title="https://w3id.org/abo#TaskComplexity">task complexity</a></li>
+  <li><a href="#Workload" title="https://w3id.org/abo#Workload">workload</a></li>
+ </ul>
+ <div class="entity" id="AIExplanation">
+  <h3>AI explanation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#AIExplanation</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#AIOutput" title="https://w3id.org/abo#AIOutput">AI output</a> <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/ns/prov#Entity" target="_blank" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasExplanation" title="https://w3id.org/abo#hasExplanation">has explanation</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="AIModel">
+  <h3>AI model<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#AIModel</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#SoftwareAgent" target="_blank" title="http://www.w3.org/ns/prov#SoftwareAgent">Software Agent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hadPerformanceMetrics" title="https://w3id.org/abo#hadPerformanceMetrics">had performance metrics</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasModelName" title="https://w3id.org/abo#hasModelName">has model name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasModelVersion" title="https://w3id.org/abo#hasModelVersion">has model version</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/prov#wasAttributedTo" title="http://www.w3.org/ns/prov#wasAttributedTo">was Attributed To</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="AIOutput">
+  <h3>AI output<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#AIOutput</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#Entity" target="_blank" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#AIExplanation" title="https://w3id.org/abo#AIExplanation">AI explanation</a> <sup class="type-c" title="class">c</sup>, <a href="#AIRecommendation" title="https://w3id.org/abo#AIRecommendation">AI recommendation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/prov#wasAttributedTo" title="http://www.w3.org/ns/prov#wasAttributedTo">was Attributed To</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="AIRecommendation">
+  <h3>AI recommendation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#AIRecommendation</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#AIOutput" title="https://w3id.org/abo#AIOutput">AI output</a> <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/ns/prov#Entity" target="_blank" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasRecommendationValue" title="https://w3id.org/abo#hasRecommendationValue">has recommendation value</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="AISystemTask">
+  <h3>AI system task<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#AISystemTask</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#Entity" target="_blank" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hadTaskComplexity" title="https://w3id.org/abo#hadTaskComplexity">had task complexity</a> <sup class="type-op" title="object property">op</sup>, <a href="#hadTaskInformation" title="https://w3id.org/abo#hadTaskInformation">had task information</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTaskID" title="https://w3id.org/abo#hasTaskID">has task ID</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#wasOversightOf" title="https://w3id.org/abo#wasOversightOf">was oversight of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="EnvironmentalFactor">
+  <h3>environmental factor<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#EnvironmentalFactor</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#Entity" target="_blank" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#TaskComplexity" title="https://w3id.org/abo#TaskComplexity">task complexity</a> <sup class="type-c" title="class">c</sup>, <a href="#Workload" title="https://w3id.org/abo#Workload">workload</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hadEnvironment" title="https://w3id.org/abo#hadEnvironment">had environment</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HumanInteraction">
+  <h3>human interaction<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#HumanInteraction</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#Usage" target="_blank" title="http://www.w3.org/ns/prov#Usage">Usage</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/prov#entity" title="http://www.w3.org/ns/prov#entity">entity</a> <sup class="type-op" title="object property">op</sup>, <a href="#hadInteractionEvidence" title="https://w3id.org/abo#hadInteractionEvidence">had interaction evidence</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/prov#qualifiedUsage" title="http://www.w3.org/ns/prov#qualifiedUsage">qualified Usage</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HumanOperator">
+  <h3>human operator<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#HumanOperator</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#Person" target="_blank" title="http://www.w3.org/ns/prov#Person">Person</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasAILiteracyScore" title="https://w3id.org/abo#hasAILiteracyScore">has AI literacy score</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasExperience" title="https://w3id.org/abo#hasExperience">has experience</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasRole" title="https://w3id.org/abo#hasRole">has role</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/prov#agent" title="http://www.w3.org/ns/prov#agent">agent</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HumanOperatorContext">
+  <h3>human operator context<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#HumanOperatorContext</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#Association" target="_blank" title="http://www.w3.org/ns/prov#Association">Association</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/prov#agent" title="http://www.w3.org/ns/prov#agent">agent</a> <sup class="type-op" title="object property">op</sup>, <a href="#hadEnvironment" title="https://w3id.org/abo#hadEnvironment">had environment</a> <sup class="type-op" title="object property">op</sup>, <a href="#hadProfile" title="https://w3id.org/abo#hadProfile">had profile</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/prov#qualifiedAssociation" title="http://www.w3.org/ns/prov#qualifiedAssociation">qualified Association</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="HumanOversightActivity">
+  <h3>human oversight activity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#HumanOversightActivity</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#Activity" target="_blank" title="http://www.w3.org/ns/prov#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#endedAtTime" target="_blank" title="http://www.w3.org/ns/prov#endedAtTime">ended At Time</a> <sup class="type-ap" title="annotation property">ap</sup>, <a href="#http://www.w3.org/ns/prov#qualifiedAssociation" title="http://www.w3.org/ns/prov#qualifiedAssociation">qualified Association</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/prov#qualifiedUsage" title="http://www.w3.org/ns/prov#qualifiedUsage">qualified Usage</a> <sup class="type-op" title="object property">op</sup>, <a href="http://www.w3.org/ns/prov#startedAtTime" target="_blank" title="http://www.w3.org/ns/prov#startedAtTime">started At Time</a> <sup class="type-ap" title="annotation property">ap</sup>, <a href="#wasOversightOf" title="https://w3id.org/abo#wasOversightOf">was oversight of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/prov#wasGeneratedBy" title="http://www.w3.org/ns/prov#wasGeneratedBy">was Generated By</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="InformationArtifact">
+  <h3>information artifact<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#InformationArtifact</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#Entity" target="_blank" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/prov#entity" title="http://www.w3.org/ns/prov#entity">entity</a> <sup class="type-op" title="object property">op</sup>, <a href="#hadTaskInformation" title="https://w3id.org/abo#hadTaskInformation">had task information</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="InteractionEvidence">
+  <h3>interaction evidence<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#InteractionEvidence</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#Entity" target="_blank" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasDuration" title="https://w3id.org/abo#hasDuration">has duration</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasEvidenceID" title="https://w3id.org/abo#hasEvidenceID">has evidence ID</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasFileReference" title="https://w3id.org/abo#hasFileReference">has file reference</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasFileSource" title="https://w3id.org/abo#hasFileSource">has file source</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hadInteractionEvidence" title="https://w3id.org/abo#hadInteractionEvidence">had interaction evidence</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="OperatorProfile">
+  <h3>operator profile<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#OperatorProfile</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#Entity" target="_blank" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hadProfile" title="https://w3id.org/abo#hadProfile">had profile</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="OversightResult">
+  <h3>oversight result<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#OversightResult</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#Entity" target="_blank" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#http://www.w3.org/ns/prov#wasGeneratedBy" title="http://www.w3.org/ns/prov#wasGeneratedBy">was Generated By</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PerformanceMetric">
+  <h3>performance metric<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#PerformanceMetric</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#Entity" target="_blank" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasMetricName" title="https://w3id.org/abo#hasMetricName">has metric name</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasMetricUnit" title="https://w3id.org/abo#hasMetricUnit">has metric unit</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasMetricValue" title="https://w3id.org/abo#hasMetricValue">has metric value</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hadPerformanceMetrics" title="https://w3id.org/abo#hadPerformanceMetrics">had performance metrics</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TaskComplexity">
+  <h3>task complexity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#TaskComplexity</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#Entity" target="_blank" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>, <a href="#EnvironmentalFactor" title="https://w3id.org/abo#EnvironmentalFactor">environmental factor</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hadTaskComplexity" title="https://w3id.org/abo#hadTaskComplexity">had task complexity</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Workload">
+  <h3>workload<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#Workload</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/prov#Entity" target="_blank" title="http://www.w3.org/ns/prov#Entity">Entity</a> <sup class="type-c" title="class">c</sup>, <a href="#EnvironmentalFactor" title="https://w3id.org/abo#EnvironmentalFactor">environmental factor</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasMeasurementUnit" title="https://w3id.org/abo#hasMeasurementUnit">has measurement unit</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasMeasurementValue" title="https://w3id.org/abo#hasMeasurementValue">has measurement value</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://www.w3.org/ns/prov#agent" title="http://www.w3.org/ns/prov#agent"> <span>agent</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/prov#entity" title="http://www.w3.org/ns/prov#entity"> <span>entity</span> </a></li>
+  <li><a href="#hadEnvironment" title="https://w3id.org/abo#hadEnvironment">had environment</a></li>
+  <li><a href="#hadInteractionEvidence" title="https://w3id.org/abo#hadInteractionEvidence">had interaction evidence</a></li>
+  <li><a href="#hadPerformanceMetrics" title="https://w3id.org/abo#hadPerformanceMetrics">had performance metrics</a></li>
+  <li><a href="#hadProfile" title="https://w3id.org/abo#hadProfile">had profile</a></li>
+  <li><a href="#hadTaskComplexity" title="https://w3id.org/abo#hadTaskComplexity">had task complexity</a></li>
+  <li><a href="#hadTaskInformation" title="https://w3id.org/abo#hadTaskInformation">had task information</a></li>
+  <li><a href="#http://www.w3.org/ns/prov#qualifiedAssociation" title="http://www.w3.org/ns/prov#qualifiedAssociation"> <span>qualified Association</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/prov#qualifiedUsage" title="http://www.w3.org/ns/prov#qualifiedUsage"> <span>qualified Usage</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/prov#wasAttributedTo" title="http://www.w3.org/ns/prov#wasAttributedTo"> <span>was Attributed To</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/prov#wasGeneratedBy" title="http://www.w3.org/ns/prov#wasGeneratedBy"> <span>was Generated By</span> </a></li>
+  <li><a href="#wasOversightOf" title="https://w3id.org/abo#wasOversightOf">was oversight of</a></li>
+ </ul>
+ <div class="entity" id="http://www.w3.org/ns/prov#agent">
+  <h3>agent<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#agent</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#HumanOperatorContext" title="https://w3id.org/abo#HumanOperatorContext">human operator context</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#HumanOperator" title="https://w3id.org/abo#HumanOperator">human operator</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#entity">
+  <h3>entity<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#entity</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#HumanInteraction" title="https://w3id.org/abo#HumanInteraction">human interaction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#InformationArtifact" title="https://w3id.org/abo#InformationArtifact">information artifact</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hadEnvironment">
+  <h3>had environment<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#hadEnvironment</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#HumanOperatorContext" title="https://w3id.org/abo#HumanOperatorContext">human operator context</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#EnvironmentalFactor" title="https://w3id.org/abo#EnvironmentalFactor">environmental factor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hadInteractionEvidence">
+  <h3>had interaction evidence<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#hadInteractionEvidence</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#HumanInteraction" title="https://w3id.org/abo#HumanInteraction">human interaction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#InteractionEvidence" title="https://w3id.org/abo#InteractionEvidence">interaction evidence</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hadPerformanceMetrics">
+  <h3>had performance metrics<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#hadPerformanceMetrics</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#AIModel" title="https://w3id.org/abo#AIModel">AI model</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#PerformanceMetric" title="https://w3id.org/abo#PerformanceMetric">performance metric</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hadProfile">
+  <h3>had profile<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#hadProfile</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#HumanOperatorContext" title="https://w3id.org/abo#HumanOperatorContext">human operator context</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#OperatorProfile" title="https://w3id.org/abo#OperatorProfile">operator profile</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hadTaskComplexity">
+  <h3>had task complexity<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#hadTaskComplexity</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#AISystemTask" title="https://w3id.org/abo#AISystemTask">AI system task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#TaskComplexity" title="https://w3id.org/abo#TaskComplexity">task complexity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hadTaskInformation">
+  <h3>had task information<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#hadTaskInformation</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#AISystemTask" title="https://w3id.org/abo#AISystemTask">AI system task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#InformationArtifact" title="https://w3id.org/abo#InformationArtifact">information artifact</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#qualifiedAssociation">
+  <h3>qualified Association<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#qualifiedAssociation</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#HumanOversightActivity" title="https://w3id.org/abo#HumanOversightActivity">human oversight activity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#HumanOperatorContext" title="https://w3id.org/abo#HumanOperatorContext">human operator context</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#qualifiedUsage">
+  <h3>qualified Usage<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#qualifiedUsage</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#HumanOversightActivity" title="https://w3id.org/abo#HumanOversightActivity">human oversight activity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#HumanInteraction" title="https://w3id.org/abo#HumanInteraction">human interaction</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#wasAttributedTo">
+  <h3>was Attributed To<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#wasAttributedTo</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#AIOutput" title="https://w3id.org/abo#AIOutput">AI output</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#AIModel" title="https://w3id.org/abo#AIModel">AI model</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#wasGeneratedBy">
+  <h3>was Generated By<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#wasGeneratedBy</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#OversightResult" title="https://w3id.org/abo#OversightResult">oversight result</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#HumanOversightActivity" title="https://w3id.org/abo#HumanOversightActivity">human oversight activity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="wasOversightOf">
+  <h3>was oversight of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#wasOversightOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#HumanOversightActivity" title="https://w3id.org/abo#HumanOversightActivity">human oversight activity</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#AISystemTask" title="https://w3id.org/abo#AISystemTask">AI system task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#hasAILiteracyScore" title="https://w3id.org/abo#hasAILiteracyScore">has AI literacy score</a></li>
+  <li><a href="#hasDuration" title="https://w3id.org/abo#hasDuration">has duration</a></li>
+  <li><a href="#hasEvidenceID" title="https://w3id.org/abo#hasEvidenceID">has evidence ID</a></li>
+  <li><a href="#hasExperience" title="https://w3id.org/abo#hasExperience">has experience</a></li>
+  <li><a href="#hasExplanation" title="https://w3id.org/abo#hasExplanation">has explanation</a></li>
+  <li><a href="#hasFileReference" title="https://w3id.org/abo#hasFileReference">has file reference</a></li>
+  <li><a href="#hasFileSource" title="https://w3id.org/abo#hasFileSource">has file source</a></li>
+  <li><a href="#hasMeasurementUnit" title="https://w3id.org/abo#hasMeasurementUnit">has measurement unit</a></li>
+  <li><a href="#hasMeasurementValue" title="https://w3id.org/abo#hasMeasurementValue">has measurement value</a></li>
+  <li><a href="#hasMetricName" title="https://w3id.org/abo#hasMetricName">has metric name</a></li>
+  <li><a href="#hasMetricUnit" title="https://w3id.org/abo#hasMetricUnit">has metric unit</a></li>
+  <li><a href="#hasMetricValue" title="https://w3id.org/abo#hasMetricValue">has metric value</a></li>
+  <li><a href="#hasModelName" title="https://w3id.org/abo#hasModelName">has model name</a></li>
+  <li><a href="#hasModelVersion" title="https://w3id.org/abo#hasModelVersion">has model version</a></li>
+  <li><a href="#hasRecommendationValue" title="https://w3id.org/abo#hasRecommendationValue">has recommendation value</a></li>
+  <li><a href="#hasRole" title="https://w3id.org/abo#hasRole">has role</a></li>
+  <li><a href="#hasTaskID" title="https://w3id.org/abo#hasTaskID">has task ID</a></li>
+ </ul>
+ <div class="entity" id="hasAILiteracyScore">
+  <h3>has AI literacy score<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#hasAILiteracyScore</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#HumanOperator" title="https://w3id.org/abo#HumanOperator">human operator</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasDuration">
+  <h3>has duration<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#hasDuration</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#InteractionEvidence" title="https://w3id.org/abo#InteractionEvidence">interaction evidence</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasEvidenceID">
+  <h3>has evidence ID<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#hasEvidenceID</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#InteractionEvidence" title="https://w3id.org/abo#InteractionEvidence">interaction evidence</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasExperience">
+  <h3>has experience<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#hasExperience</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#HumanOperator" title="https://w3id.org/abo#HumanOperator">human operator</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasExplanation">
+  <h3>has explanation<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#hasExplanation</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#AIExplanation" title="https://w3id.org/abo#AIExplanation">AI explanation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2000/01/rdf-schema#Literal" target="_blank" title="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasFileReference">
+  <h3>has file reference<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#hasFileReference</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#InteractionEvidence" title="https://w3id.org/abo#InteractionEvidence">interaction evidence</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasFileSource">
+  <h3>has file source<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#hasFileSource</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#InteractionEvidence" title="https://w3id.org/abo#InteractionEvidence">interaction evidence</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasMeasurementUnit">
+  <h3>has measurement unit<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#hasMeasurementUnit</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Workload" title="https://w3id.org/abo#Workload">workload</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasMeasurementValue">
+  <h3>has measurement value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#hasMeasurementValue</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Workload" title="https://w3id.org/abo#Workload">workload</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasMetricName">
+  <h3>has metric name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#hasMetricName</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#PerformanceMetric" title="https://w3id.org/abo#PerformanceMetric">performance metric</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasMetricUnit">
+  <h3>has metric unit<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#hasMetricUnit</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#PerformanceMetric" title="https://w3id.org/abo#PerformanceMetric">performance metric</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasMetricValue">
+  <h3>has metric value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#hasMetricValue</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#PerformanceMetric" title="https://w3id.org/abo#PerformanceMetric">performance metric</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#float" target="_blank" title="http://www.w3.org/2001/XMLSchema#float">float</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasModelName">
+  <h3>has model name<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#hasModelName</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#AIModel" title="https://w3id.org/abo#AIModel">AI model</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasModelVersion">
+  <h3>has model version<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#hasModelVersion</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#AIModel" title="https://w3id.org/abo#AIModel">AI model</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasRecommendationValue">
+  <h3>has recommendation value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#hasRecommendationValue</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#AIRecommendation" title="https://w3id.org/abo#AIRecommendation">AI recommendation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2000/01/rdf-schema#Literal" target="_blank" title="http://www.w3.org/2000/01/rdf-schema#Literal">Literal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasRole">
+  <h3>has role<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#hasRole</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#HumanOperator" title="https://w3id.org/abo#HumanOperator">human operator</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasTaskID">
+  <h3>has task ID<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/abo#hasTaskID</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#AISystemTask" title="https://w3id.org/abo#AISystemTask">AI system task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+</div>
+</div>

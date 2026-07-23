@@ -1,0 +1,226 @@
+@prefix abo: <https://w3id.org/abo#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+prov:agent rdfs:domain abo:HumanOperatorContext ;
+    rdfs:range abo:HumanOperator .
+
+prov:endedAtTime a owl:AnnotationProperty ;
+    rdfs:domain abo:HumanOversightActivity .
+
+prov:entity rdfs:domain abo:HumanInteraction ;
+    rdfs:range abo:InformationArtifact .
+
+prov:qualifiedAssociation rdfs:domain abo:HumanOversightActivity ;
+    rdfs:range abo:HumanOperatorContext .
+
+prov:qualifiedUsage rdfs:domain abo:HumanOversightActivity ;
+    rdfs:range abo:HumanInteraction .
+
+prov:startedAtTime a owl:AnnotationProperty ;
+    rdfs:domain abo:HumanOversightActivity .
+
+prov:wasAttributedTo rdfs:domain abo:AIOutput ;
+    rdfs:range abo:AIModel .
+
+prov:wasGeneratedBy rdfs:domain abo:OversightResult ;
+    rdfs:range abo:HumanOversightActivity .
+
+abo: a owl:Ontology ;
+    rdfs:label "Automation Bias Ontology"@en ;
+    owl:imports <http://promsns.org/def/decprov> .
+
+abo:hadEnvironment a owl:ObjectProperty ;
+    rdfs:label "had environment"@en ;
+    rdfs:domain abo:HumanOperatorContext ;
+    rdfs:range abo:EnvironmentalFactor .
+
+abo:hadInteractionEvidence a owl:ObjectProperty ;
+    rdfs:label "had interaction evidence"@en ;
+    rdfs:domain abo:HumanInteraction ;
+    rdfs:range abo:InteractionEvidence .
+
+abo:hadPerformanceMetrics a owl:ObjectProperty ;
+    rdfs:label "had performance metrics"@en ;
+    rdfs:domain abo:AIModel ;
+    rdfs:range abo:PerformanceMetric .
+
+abo:hadProfile a owl:ObjectProperty ;
+    rdfs:label "had profile"@en ;
+    rdfs:domain abo:HumanOperatorContext ;
+    rdfs:range abo:OperatorProfile .
+
+abo:hadTaskComplexity a owl:ObjectProperty ;
+    rdfs:label "had task complexity"@en ;
+    rdfs:domain abo:AISystemTask ;
+    rdfs:range abo:TaskComplexity .
+
+abo:hadTaskInformation a owl:ObjectProperty ;
+    rdfs:label "had task information"@en ;
+    rdfs:domain abo:AISystemTask ;
+    rdfs:range abo:InformationArtifact .
+
+abo:hasAILiteracyScore a owl:DatatypeProperty ;
+    rdfs:label "has AI literacy score"@en ;
+    rdfs:domain abo:HumanOperator ;
+    rdfs:range xsd:decimal .
+
+abo:hasDuration a owl:DatatypeProperty ;
+    rdfs:label "has duration"@en ;
+    rdfs:domain abo:InteractionEvidence ;
+    rdfs:range xsd:decimal .
+
+abo:hasEvidenceID a owl:DatatypeProperty ;
+    rdfs:label "has evidence ID"@en ;
+    rdfs:domain abo:InteractionEvidence ;
+    rdfs:range xsd:string .
+
+abo:hasExperience a owl:DatatypeProperty ;
+    rdfs:label "has experience"@en ;
+    rdfs:domain abo:HumanOperator ;
+    rdfs:range xsd:decimal .
+
+abo:hasExplanation a owl:DatatypeProperty ;
+    rdfs:label "has explanation"@en ;
+    rdfs:domain abo:AIExplanation ;
+    rdfs:range rdfs:Literal .
+
+abo:hasFileReference a owl:DatatypeProperty ;
+    rdfs:label "has file reference"@en ;
+    rdfs:domain abo:InteractionEvidence ;
+    rdfs:range xsd:string .
+
+abo:hasFileSource a owl:DatatypeProperty ;
+    rdfs:label "has file source"@en ;
+    rdfs:domain abo:InteractionEvidence ;
+    rdfs:range xsd:string .
+
+abo:hasMeasurementUnit a owl:DatatypeProperty ;
+    rdfs:label "has measurement unit"@en ;
+    rdfs:domain abo:Workload ;
+    rdfs:range xsd:string .
+
+abo:hasMeasurementValue a owl:DatatypeProperty ;
+    rdfs:label "has measurement value"@en ;
+    rdfs:domain abo:Workload ;
+    rdfs:range xsd:float .
+
+abo:hasMetricName a owl:DatatypeProperty ;
+    rdfs:label "has metric name"@en ;
+    rdfs:domain abo:PerformanceMetric ;
+    rdfs:range xsd:string .
+
+abo:hasMetricUnit a owl:DatatypeProperty ;
+    rdfs:label "has metric unit"@en ;
+    rdfs:domain abo:PerformanceMetric ;
+    rdfs:range xsd:string .
+
+abo:hasMetricValue a owl:DatatypeProperty ;
+    rdfs:label "has metric value"@en ;
+    rdfs:domain abo:PerformanceMetric ;
+    rdfs:range xsd:float .
+
+abo:hasModelName a owl:DatatypeProperty ;
+    rdfs:label "has model name"@en ;
+    rdfs:domain abo:AIModel ;
+    rdfs:range xsd:string .
+
+abo:hasModelVersion a owl:DatatypeProperty ;
+    rdfs:label "has model version"@en ;
+    rdfs:domain abo:AIModel ;
+    rdfs:range xsd:string .
+
+abo:hasRecommendationValue a owl:DatatypeProperty ;
+    rdfs:label "has recommendation value"@en ;
+    rdfs:domain abo:AIRecommendation ;
+    rdfs:range rdfs:Literal .
+
+abo:hasRole a owl:DatatypeProperty ;
+    rdfs:label "has role"@en ;
+    rdfs:domain abo:HumanOperator ;
+    rdfs:range xsd:string .
+
+abo:hasTaskID a owl:DatatypeProperty ;
+    rdfs:label "has task ID"@en ;
+    rdfs:domain abo:AISystemTask ;
+    rdfs:range xsd:string .
+
+abo:wasOversightOf a owl:ObjectProperty ;
+    rdfs:label "was oversight of"@en ;
+    rdfs:domain abo:HumanOversightActivity ;
+    rdfs:range abo:AISystemTask .
+
+abo:AIExplanation a owl:Class ;
+    rdfs:label "AI explanation"@en ;
+    rdfs:subClassOf prov:Entity,
+        abo:AIOutput .
+
+abo:AIRecommendation a owl:Class ;
+    rdfs:label "AI recommendation"@en ;
+    rdfs:subClassOf prov:Entity,
+        abo:AIOutput .
+
+abo:OperatorProfile a owl:Class ;
+    rdfs:label "operator profile"@en ;
+    rdfs:subClassOf prov:Entity .
+
+abo:OversightResult a owl:Class ;
+    rdfs:label "oversight result"@en ;
+    rdfs:subClassOf prov:Entity .
+
+abo:TaskComplexity a owl:Class ;
+    rdfs:label "task complexity"@en ;
+    rdfs:subClassOf prov:Entity,
+        abo:EnvironmentalFactor .
+
+abo:InformationArtifact a owl:Class ;
+    rdfs:label "information artifact"@en ;
+    rdfs:subClassOf prov:Entity .
+
+abo:Workload a owl:Class ;
+    rdfs:label "workload"@en ;
+    rdfs:subClassOf prov:Entity,
+        abo:EnvironmentalFactor .
+
+abo:AIOutput a owl:Class ;
+    rdfs:label "AI output"@en ;
+    rdfs:subClassOf prov:Entity .
+
+abo:EnvironmentalFactor a owl:Class ;
+    rdfs:label "environmental factor"@en ;
+    rdfs:subClassOf prov:Entity .
+
+abo:HumanInteraction a owl:Class ;
+    rdfs:label "human interaction"@en ;
+    rdfs:subClassOf prov:Usage .
+
+abo:AIModel a owl:Class ;
+    rdfs:label "AI model"@en ;
+    rdfs:subClassOf prov:SoftwareAgent .
+
+abo:AISystemTask a owl:Class ;
+    rdfs:label "AI system task"@en ;
+    rdfs:subClassOf prov:Entity .
+
+abo:HumanOperator a owl:Class ;
+    rdfs:label "human operator"@en ;
+    rdfs:subClassOf prov:Person .
+
+abo:HumanOperatorContext a owl:Class ;
+    rdfs:label "human operator context"@en ;
+    rdfs:subClassOf prov:Association .
+
+abo:PerformanceMetric a owl:Class ;
+    rdfs:label "performance metric"@en ;
+    rdfs:subClassOf prov:Entity .
+
+abo:InteractionEvidence a owl:Class ;
+    rdfs:label "interaction evidence"@en ;
+    rdfs:subClassOf prov:Entity .
+
+abo:HumanOversightActivity a owl:Class ;
+    rdfs:label "human oversight activity"@en ;
+    rdfs:subClassOf prov:Activity .
+
