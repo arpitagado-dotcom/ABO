@@ -198,3 +198,26 @@ SELECT DISTINCT ?taskID ?operator ?role WHERE {
 | "Alice123" | [https://w3id.org/abo#Operator_DrJay](https://w3id.org/abo#Operator_DrJay) | "Senior Radiologist" |
 
 
+# Agent Profile
+
+## CQ9: What was the human oversight decision of this human operator for this AI output?
+```sparql
+PREFIX abo:  [https://w3id.org/abo#](https://w3id.org/abo#)
+PREFIX prov: [http://www.w3.org/ns/prov#](http://www.w3.org/ns/prov#)
+PREFIX rdfs: [http://www.w3.org/2000/01/rdf-schema#](http://www.w3.org/2000/01/rdf-schema#)
+PREFIX xsd:  [http://www.w3.org/2001/XMLSchema#](http://www.w3.org/2001/XMLSchema#)
+
+SELECT ?activity ?oversightDecision ?oversightDecisionNote WHERE {
+  ?result a abo:OversightResult ;
+          prov:wasGeneratedBy ?activity ;
+          abo:hasOversightDecision ?oversightDecision .
+  OPTIONAL { ?result abo:hasOversightDecisionNote ?oversightDecisionNote . }
+}
+```
+| activity | oversightDecision | oversightDecisionNote |
+| :--- | :--- | :--- |
+| [https://w3id.org/abo#OversightActivity_Case1](https://w3id.org/abo#OversightActivity_Case1) | "BI RADS 1" | "Return for scan after a year" |
+| [https://w3id.org/abo#OversightActivity_Case2](https://w3id.org/abo#OversightActivity_Case2) | "BI RADS 4" | "Stereotactic biopsy recommended" |
+| [https://w3id.org/abo#OversightActivity_Case3](https://w3id.org/abo#OversightActivity_Case3) | "BI RADS 4" | "Stereotactic biopsy recommended" |
+
+
