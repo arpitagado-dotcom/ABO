@@ -16,35 +16,19 @@ While provenance models such as W3C PROV-O describe relationships between entiti
 
 ABO addresses this gap by providing a PROV-O-aligned model for representing decision provenance and contextual information relevant to human oversight.
 
-## Scope
 
-ABO currently focuses on modelling contextual information associated with:
-
-| Category | Examples |
-|---|---|
-| AI System | AI recommendations, model information, explanations, performance information |
-| Human Operator | Expertise, AI literacy, oversight decisions, interaction information |
-| Operational Context | Workload, task complexity, accessed information |
-
-ABO represents contextual evidence that can support analysis of automation bias. It does not directly determine whether automation bias has occurred.
-
-
-## Repository Structure
-
-| Directory | Description |
-|---|---|
-| `ontology/` | OWL ontology files |
-| `docs/` | Widoco-generated ontology documentation |
-| `competency-questions/` | Competency questions used during ontology development |
-| `examples/` | Example ontology instances |
-| `images/` | Figures and diagrams |
 
 
 ## Publication
 
 ## Documentation
 
+## Contact 
+Arpita Gado: a.gado.25@abdn.ac.uk
+
 ## Acknowledgements 
+
+Automation Bias Ontology is being developed as part of a research project at the Interdisciplinary Institute, University of Aberdeen. 
 
 # License 
 
