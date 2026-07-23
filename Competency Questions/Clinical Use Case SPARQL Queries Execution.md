@@ -207,27 +207,30 @@ SELECT DISTINCT ?taskID ?operator ?role WHERE {
 
 ## CQ9: What was the human oversight decision of the human operator for this AI output?
 ```sparql
-```sparql
 PREFIX abo:  [https://w3id.org/abo#]
 PREFIX prov: [http://www.w3.org/ns/prov#]
 PREFIX rdfs: [http://www.w3.org/2000/01/rdf-schema#]
 PREFIX xsd:  [http://www.w3.org/2001/XMLSchema#]
 
-SELECT ?activity ?oversightDecision ?oversightDecisionNote WHERE {
+SELECT ?activity ?recommendationValue ?oversightDecision ?oversightDecisionNote WHERE {
   ?result a abo:OversightResult ;
           prov:wasGeneratedBy ?activity ;
           abo:hasOversightDecision ?oversightDecision .
+  ?activity a abo:HumanOversightActivity ;
+            abo:wasOversightOf ?task .
+  ?task abo:hadTaskInformation ?aiOutput .
+  ?aiOutput a abo:AIRecommendation ;
+            abo:hasRecommendationValue ?recommendationValue .
   OPTIONAL { ?result abo:hasOversightDecisionNote ?oversightDecisionNote . }
 }
 ```
-| activity | oversightDecision | oversightDecisionNote |
-| :--- | :--- | :--- |
-| [https://w3id.org/abo#OversightActivity_Case1](https://w3id.org/abo#OversightActivity_Case1) | "BI RADS 1" | "Return for scan after a year" |
-| [https://w3id.org/abo#OversightActivity_Case2](https://w3id.org/abo#OversightActivity_Case2) | "BI RADS 4" | "Stereotactic biopsy recommended" |
-| [https://w3id.org/abo#OversightActivity_Case3](https://w3id.org/abo#OversightActivity_Case3) | "BI RADS 4" | "Stereotactic biopsy recommended" |
+| activity | recommendationValue | oversightDecision | oversightDecisionNote |
+| :--- | :--- | :--- | :--- |
+| [https://w3id.org/abo#OversightActivity_Case1](https://w3id.org/abo#OversightActivity_Case1) | "BI RADS 1" | "BI RADS 1" | "Return for scan after a year" |
+| [https://w3id.org/abo#OversightActivity_Case2](https://w3id.org/abo#OversightActivity_Case2) | "BI RADS 1" | "BI RADS 4" | "Stereotactic biopsy recommended" |
+| [https://w3id.org/abo#OversightActivity_Case3](https://w3id.org/abo#OversightActivity_Case3) | "BI RADS 1" | "BI RADS 4" | "Stereotactic biopsy recommended" |
 
 ## CQ10: What was this operator’s level of expertise during this human oversight process? 
-```sparql
 ```sparql
 PREFIX abo:  [https://w3id.org/abo#]
 PREFIX prov: [http://www.w3.org/ns/prov#]
@@ -249,5 +252,45 @@ SELECT ?activity ?experience ?role WHERE {
 | [https://w3id.org/abo#OversightActivity_Case2](https://w3id.org/abo#OversightActivity_Case2) | "15.0"^^xsd:decimal | "Senior Radiologist" |
 
 ## CQ11: What was this operator’s AI literacy score during this human oversight process?
+```sparql
+PREFIX abo:  <https://w3id.org/abo#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?activity ?operatorName ?aiLiteracyScore ?aiLiteracyScoreUnit WHERE {
+  ?activity a abo:HumanOversightActivity ;
+            prov:qualifiedAssociation ?context .
+  ?context prov:agent ?operator ;
+           abo:hadProfile ?profile .
+  ?operator rdfs:label ?operatorName .
+  ?profile abo:hasAILiteracyScore ?aiLiteracyScore ;
+           abo:hasAILiteracyScoreUnit ?aiLiteracyScoreUnit .
+}
+```
+| activity | operatorName | aiLiteracyScore | aiLiteracyScoreUnit |
+| :--- | :--- | :--- | :--- |
+| [https://w3id.org/abo#OversightActivity_Case1](https://w3id.org/abo#OversightActivity_Case1) | "Dr. Bob" | "6.5"^^xsd:decimal | "10"^^xsd:integer |
+| [https://w3id.org/abo#OversightActivity_Case3](https://w3id.org/abo#OversightActivity_Case3) | "Dr. Bob" | "6.5"^^xsd:decimal | "10"^^xsd:integer |
+| [https://w3id.org/abo#OversightActivity_Case2](https://w3id.org/abo#OversightActivity_Case2) | "Dr. Jay" | "4.0"^^xsd:decimal | "10"^^xsd:integer |
 
 ## CQ12: What was the duration this human operator spent on this human oversight process?
+```sparql
+PREFIX abo:  <https://w3id.org/abo#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?activity ?operatorName ?duration WHERE {
+  ?activity a abo:HumanOversightActivity ;
+            prov:startedAtTime ?startedAt ;
+            prov:endedAtTime ?endedAt ;
+            prov:qualifiedAssociation ?context .
+  ?context prov:agent ?operator .
+  ?operator rdfs:label ?operatorName .
+  BIND((?endedAt - ?startedAt) AS ?duration)
+}
+```
+| activity | operatorName | duration |
+| :--- | :--- | :--- |
+| [https://w3id.org/abo#OversightActivity_Case1](https://w3id.org/abo#OversightActivity_Case1) | "Dr. Bob" | "PT2M"^^xsd:dayTimeDuration |
+| [https://w3id.org/abo#OversightActivity_Case2](https://w3id.org/abo#OversightActivity_Case2) | "Dr. Jay" | "PT7M"^^xsd:dayTimeDuration |
+| [https://w3id.org/abo#OversightActivity_Case3](https://w3id.org/abo#OversightActivity_Case3) | "Dr. Bob" | "PT8M"^^xsd:dayTimeDuration |
