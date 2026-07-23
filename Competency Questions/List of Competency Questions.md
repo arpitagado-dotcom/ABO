@@ -43,6 +43,11 @@ SELECT ?activity ?recommendationValue ?explanation WHERE {
 **Key Concepts**: `abo:AIOutput`, `AIModel`, `HumanOversightActivity`
 
 ```sparql
+PREFIX abo:  <https://w3id.org/abo#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
 SELECT DISTINCT ?activity ?modelName ?modelVersion WHERE {
   ?activity a abo:HumanOversightActivity ;
             abo:wasOversightOf ?task .
@@ -59,3 +64,63 @@ SELECT DISTINCT ?activity ?modelName ?modelVersion WHERE {
 | [https://w3id.org/abo#OversightActivity_Case1](https://w3id.org/abo#OversightActivity_Case1) | "V1" | "V1" |
 | [https://w3id.org/abo#OversightActivity_Case2](https://w3id.org/abo#OversightActivity_Case2) | "V1" | "V1" |
 | [https://w3id.org/abo#OversightActivity_Case3](https://w3id.org/abo#OversightActivity_Case3) | "V1" | "V1" |
+
+## CQ3: What explanation was provided by the AI system for this AI output during this human oversight process?
+
+**Key Concepts**: `AIExplanation`, `AIOutput`, `HumanOversightActivity`
+
+```sparql
+PREFIX abo:  <https://w3id.org/abo#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+SELECT ?activity ?explanation WHERE {
+  ?activity a abo:HumanOversightActivity ;
+            abo:wasOversightOf ?task .
+  ?task abo:hadTaskInformation ?exp .
+  ?exp a abo:AIExplanation ;
+       abo:hasExplanation ?explanation .
+}
+
+```
+| activity | explanation |
+| :--- | :--- |
+| [https://w3id.org/abo#OversightActivity_Case1](https://w3id.org/abo#OversightActivity_Case1) | "SHAP" |
+| [https://w3id.org/abo#OversightActivity_Case2](https://w3id.org/abo#OversightActivity_Case2) | "SHAP" |
+| [https://w3id.org/abo#OversightActivity_Case3](https://w3id.org/abo#OversightActivity_Case3) | "SHAP" |
+
+
+## CQ4: What were the performance metrics of the AI model when the human operator had the same output as the AI model during a human oversight process?
+
+**Key Concept:*
+```sparql
+PREFIX abo:  [https://w3id.org/abo#](https://w3id.org/abo#)
+PREFIX prov: [http://www.w3.org/ns/prov#](http://www.w3.org/ns/prov#)
+PREFIX rdfs: [http://www.w3.org/2000/01/rdf-schema#](http://www.w3.org/2000/01/rdf-schema#)
+PREFIX xsd:  [http://www.w3.org/2001/XMLSchema#](http://www.w3.org/2001/XMLSchema#)
+
+SELECT ?activity ?operatorDecision ?aiRecommendation ?metricName ?metricValue ?metricUnit WHERE {
+  ?activity a abo:HumanOversightActivity ;
+            abo:wasOversightOf ?task .
+  ?result a abo:OversightResult ;
+          prov:wasGeneratedBy ?activity ;
+          abo:hasOversightDecision ?operatorDecision .
+  ?task abo:hadTaskInformation ?rec .
+  ?rec a abo:AIRecommendation ;
+       abo:hasRecommendationValue ?aiRecommendation ;
+       prov:wasAttributedTo ?model .
+  FILTER(?operatorDecision = ?aiRecommendation)
+  ?model a abo:AIModel ;
+         abo:hadPerformanceMetrics ?metric .
+  ?metric abo:hasMetricName ?metricName ;
+          abo:hasMetricValue ?metricValue .
+  OPTIONAL { ?metric abo:hasMetricUnit ?metricUnit . }
+}
+```
+| activity | operatorDecision | aiRecommendation | metricName | metricValue | metricUnit |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| [https://w3id.org/abo#OversightActivity_Case1](https://w3id.org/abo#OversightActivity_Case1) | "BI RADS 1" | "BI RADS 1" | "AUC-ROC (pre-deployment)" | "0.94"^^xsd:float | "score" |
+| [https://w3id.org/abo#OversightActivity_Case1](https://w3id.org/abo#OversightActivity_Case1) | "BI RADS 1" | "BI RADS 1" | "Interval cancer rate (post-deployment)" | "4.0"^^xsd:float | |
+
+
+
