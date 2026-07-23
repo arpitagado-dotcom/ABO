@@ -29,4 +29,4 @@ SELECT ?activity ?recommendationValue ?explanation WHERE {
        abo:hasExplanation ?explanation .
 }
 
-'''
+
