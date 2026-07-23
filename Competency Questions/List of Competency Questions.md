@@ -12,7 +12,6 @@ The questions are grouped into three categories:
 
 **Key concepts:** `abo:HumanOversightActivity` , `abo:AISystemTask` , `abo:HumanOperator` , `abo:AIOutput` , `abo:AIRecommendation` , `abo:InformationArtifact`
 
-RIPE-O style description here explaining how `abo:HumanOversightActivity` connects to `abo:AIRecommendation`.
 
 ```sparql
 PREFIX abo:  <https://w3id.org/abo#>
@@ -31,3 +30,9 @@ SELECT ?activity ?recommendationValue ?explanation WHERE {
        abo:hasExplanation ?explanation .
 }
 ```
+
+| activity | recommendationValue | explanation |
+| :--- | :--- | :--- |
+| <https://w3id.org/abo#OversightActivity_Case1> | "BI RADS 1" | "SHAP" |
+| <https://w3id.org/abo#OversightActivity_Case2> | "BI RADS 1" | "SHAP" |
+| <https://w3id.org/abo#OversightActivity_Case3> | "BI RADS 1" | "SHAP" |
