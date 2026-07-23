@@ -44,10 +44,10 @@ SELECT ?activity ?recommendationValue ?explanation WHERE {
 **Key Concepts**: `abo:AIOutput`, `AIModel`, `HumanOversightActivity`
 
 ```sparql
-PREFIX abo:  [https://w3id.org/abo#](https://w3id.org/abo#)
-PREFIX prov: [http://www.w3.org/ns/prov#](http://www.w3.org/ns/prov#)
-PREFIX rdfs: [http://www.w3.org/2000/01/rdf-schema#](http://www.w3.org/2000/01/rdf-schema#)
-PREFIX xsd:  [http://www.w3.org/2001/XMLSchema#](http://www.w3.org/2001/XMLSchema#)
+PREFIX abo:  [https://w3id.org/abo#]
+PREFIX prov: [http://www.w3.org/ns/prov#]
+PREFIX rdfs: [http://www.w3.org/2000/01/rdf-schema#](
+PREFIX xsd:  [http://www.w3.org/2001/XMLSchema#]
 
 SELECT DISTINCT ?activity ?recommendationValue ?modelName ?modelVersion WHERE {
   ?activity a abo:HumanOversightActivity ;
@@ -73,9 +73,9 @@ SELECT DISTINCT ?activity ?recommendationValue ?modelName ?modelVersion WHERE {
 **Key Concept:*
 ```sparql
 PREFIX abo:  [https://w3id.org/abo#]
-PREFIX prov: [http://www.w3.org/ns/prov#](http://www.w3.org/ns/prov#)
-PREFIX rdfs: [http://www.w3.org/2000/01/rdf-schema#](http://www.w3.org/2000/01/rdf-schema#)
-PREFIX xsd:  [http://www.w3.org/2001/XMLSchema#](http://www.w3.org/2001/XMLSchema#)
+PREFIX prov: [http://www.w3.org/ns/prov#]
+PREFIX rdfs: [http://www.w3.org/2000/01/rdf-schema#]
+PREFIX xsd:  [http://www.w3.org/2001/XMLSchema#]
 
 SELECT ?activity ?operatorDecision ?aiRecommendation ?metricName ?metricValue ?metricUnit WHERE {
   ?activity a abo:HumanOversightActivity ;
@@ -102,13 +102,13 @@ SELECT ?activity ?operatorDecision ?aiRecommendation ?metricName ?metricValue ?m
 
 # Environmental Context
 
-## CQ5.  What was this operator’s workload at the time of this human oversight decision? 
+## CQ4.  What was this operator’s workload at the time of this human oversight decision? 
 
 ```sparql
 PREFIX abo:  [https://w3id.org/abo#]
-PREFIX prov: [http://www.w3.org/ns/prov#](http://www.w3.org/ns/prov#)
-PREFIX rdfs: [http://www.w3.org/2000/01/rdf-schema#](http://www.w3.org/2000/01/rdf-schema#)
-PREFIX xsd:  [http://www.w3.org/2001/XMLSchema#](http://www.w3.org/2001/XMLSchema#)
+PREFIX prov: [http://www.w3.org/ns/prov#]
+PREFIX rdfs: [http://www.w3.org/2000/01/rdf-schema#]
+PREFIX xsd:  [http://www.w3.org/2001/XMLSchema#]
 
 SELECT ?activity ?measurementName ?measurementValue ?measurementUnit WHERE {
   ?activity a abo:HumanOversightActivity ;
@@ -127,14 +127,41 @@ SELECT ?activity ?measurementName ?measurementValue ?measurementUnit WHERE {
 
 ## CQ6: What information artifacts were accessed by the human operator, and what interaction evidence was recorded to support this during this human oversight process?
 
+```sparql
+PREFIX abo:  [https://w3id.org/abo#]
+PREFIX prov: [http://www.w3.org/ns/prov#]
+PREFIX rdfs: [http://www.w3.org/2000/01/rdf-schema#]
+PREFIX xsd:  [http://www.w3.org/2001/XMLSchema#]
+
+SELECT ?activity ?accessedArtifact ?label ?evidenceID ?duration ?fileSource WHERE {
+  ?activity a abo:HumanOversightActivity ;
+            prov:qualifiedUsage ?interaction .
+  ?interaction a abo:HumanInteraction ;
+               prov:entity ?accessedArtifact ;
+               abo:hadInteractionEvidence ?evidence .
+  ?evidence a abo:InteractionEvidence ;
+            abo:hasEvidenceID ?evidenceID ;
+            abo:hasDuration ?duration ;
+            abo:hasFileSource ?fileSource .
+  OPTIONAL { ?accessedArtifact rdfs:label ?label . }
+}
+```
+| activity | accessedArtifact | label | evidenceID | duration | fileSource |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| [https://w3id.org/abo#OversightActivity_Case1](https://w3id.org/abo#OversightActivity_Case1) | [https://w3id.org/abo#MedHistory_Alice](https://w3id.org/abo#MedHistory_Alice) | "Medical history (Alice123)" | "EV244" | "39"^^xsd:decimal | "Audit log" |
+| [https://w3id.org/abo#OversightActivity_Case2](https://w3id.org/abo#OversightActivity_Case2) | [https://w3id.org/abo#MedHistory_Alice](https://w3id.org/abo#MedHistory_Alice) | "Medical history (Alice123)" | "EV462" | "420"^^xsd:decimal | "Audit log" |
+| [https://w3id.org/abo#OversightActivity_Case2](https://w3id.org/abo#OversightActivity_Case2) | [https://w3id.org/abo#AIExp_Alice](https://w3id.org/abo#AIExp_Alice) | "AI explanation (Alice123): SHAP" | "EV462" | "420"^^xsd:decimal | "Audit log" |
+| [https://w3id.org/abo#OversightActivity_Case3](https://w3id.org/abo#OversightActivity_Case3) | [https://w3id.org/abo#MedHistory_Alice](https://w3id.org/abo#MedHistory_Alice) | "Medical history (Alice123)" | "EV689" | "420"^^xsd:decimal | "Audit log" |
+| [https://w3id.org/abo#OversightActivity_Case3](https://w3id.org/abo#OversightActivity_Case3) | [https://w3id.org/abo#AIExp_Alice](https://w3id.org/abo#AIExp_Alice) | "AI explanation (Alice123): SHAP" | "EV689" | "420"^^xsd:decimal | "Audit log" |
+| [https://w3id.org/abo#OversightActivity_Case3](https://w3id.org/abo#OversightActivity_Case3) | [https://w3id.org/abo#SeniorReport_Alice](https://w3id.org/abo#SeniorReport_Alice) | "Senior radiologist report: BI RADS 4" | "EV689" | "420"^^xsd:decimal | "Audit log" |
 
 ## CQ7: What was the complexity of the task during this human oversight process?
 
 ```sparql
 PREFIX abo:  [https://w3id.org/abo#]
-PREFIX prov: [http://www.w3.org/ns/prov#](http://www.w3.org/ns/prov#)
-PREFIX rdfs: [http://www.w3.org/2000/01/rdf-schema#](http://www.w3.org/2000/01/rdf-schema#)
-PREFIX xsd:  [http://www.w3.org/2001/XMLSchema#](http://www.w3.org/2001/XMLSchema#)
+PREFIX prov: [http://www.w3.org/ns/prov#]
+PREFIX rdfs: [http://www.w3.org/2000/01/rdf-schema#]
+PREFIX xsd:  [http://www.w3.org/2001/XMLSchema#]
 
 SELECT ?activity ?taskComplexityValue ?taskComplexityMeasurementUnit WHERE {
   ?activity a abo:HumanOversightActivity ;
@@ -156,9 +183,9 @@ SELECT ?activity ?taskComplexityValue ?taskComplexityMeasurementUnit WHERE {
 
 ```sparql
 PREFIX abo:  [https://w3id.org/abo#]
-PREFIX prov: [http://www.w3.org/ns/prov#](http://www.w3.org/ns/prov#)
-PREFIX rdfs: [http://www.w3.org/2000/01/rdf-schema#](http://www.w3.org/2000/01/rdf-schema#)
-PREFIX xsd:  [http://www.w3.org/2001/XMLSchema#](http://www.w3.org/2001/XMLSchema#)
+PREFIX prov: [http://www.w3.org/ns/prov#]
+PREFIX rdfs: [http://www.w3.org/2000/01/rdf-schema#]
+PREFIX xsd:  [http://www.w3.org/2001/XMLSchema#]
 
 SELECT DISTINCT ?taskID ?operator ?role WHERE {
   ?task a abo:AISystemTask ;
@@ -180,10 +207,11 @@ SELECT DISTINCT ?taskID ?operator ?role WHERE {
 
 ## CQ9: What was the human oversight decision of the human operator for this AI output?
 ```sparql
-PREFIX abo:  [https://w3id.org/abo#](https://w3id.org/abo#)
-PREFIX prov: [http://www.w3.org/ns/prov#](http://www.w3.org/ns/prov#)
-PREFIX rdfs: [http://www.w3.org/2000/01/rdf-schema#](http://www.w3.org/2000/01/rdf-schema#)
-PREFIX xsd:  [http://www.w3.org/2001/XMLSchema#](http://www.w3.org/2001/XMLSchema#)
+```sparql
+PREFIX abo:  [https://w3id.org/abo#]
+PREFIX prov: [http://www.w3.org/ns/prov#]
+PREFIX rdfs: [http://www.w3.org/2000/01/rdf-schema#]
+PREFIX xsd:  [http://www.w3.org/2001/XMLSchema#]
 
 SELECT ?activity ?oversightDecision ?oversightDecisionNote WHERE {
   ?result a abo:OversightResult ;
@@ -200,10 +228,11 @@ SELECT ?activity ?oversightDecision ?oversightDecisionNote WHERE {
 
 ## CQ10: What was this operator’s level of expertise during this human oversight process? 
 ```sparql
-PREFIX abo:  [https://w3id.org/abo#](https://w3id.org/abo#)
-PREFIX prov: [http://www.w3.org/ns/prov#](http://www.w3.org/ns/prov#)
-PREFIX rdfs: [http://www.w3.org/2000/01/rdf-schema#](http://www.w3.org/2000/01/rdf-schema#)
-PREFIX xsd:  [http://www.w3.org/2001/XMLSchema#](http://www.w3.org/2001/XMLSchema#)
+```sparql
+PREFIX abo:  [https://w3id.org/abo#]
+PREFIX prov: [http://www.w3.org/ns/prov#]
+PREFIX rdfs: [http://www.w3.org/2000/01/rdf-schema#]
+PREFIX xsd:  [http://www.w3.org/2001/XMLSchema#]
 
 SELECT ?activity ?experience ?role WHERE {
   ?activity a abo:HumanOversightActivity ;
