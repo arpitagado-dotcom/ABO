@@ -8,11 +8,13 @@ The questions are grouped into three categories:
 - Agent Profile
 
 
-## CQ1: What AI output was provided to the human operator as part of the human oversight process?
+## CQ1. What AI output was provided to the human operator as part of the human oversight process?
 
-Key Concepts: 'abo:HumanOversightActivity', 'AISystemTask', 'HumanOperator', 'AIOutput', 'AIRecommendation', 'InformationArtifact'
+**Key concepts:** `abo:HumanOversightActivity` , `abo:AISystemTask` , `abo:HumanOperator` , `abo:AIOutput` , `abo:AIRecommendation` , `abo:InformationArtifact`
 
-'''sparql
+RIPE-O style description here explaining how `abo:HumanOversightActivity` connects to `abo:AIRecommendation`.
+
+```sparql
 PREFIX abo:  <https://w3id.org/abo#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -28,5 +30,4 @@ SELECT ?activity ?recommendationValue ?explanation WHERE {
   ?exp a abo:AIExplanation ;
        abo:hasExplanation ?explanation .
 }
-
-
+```
