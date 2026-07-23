@@ -44,27 +44,28 @@ SELECT ?activity ?recommendationValue ?explanation WHERE {
 **Key Concepts**: `abo:AIOutput`, `AIModel`, `HumanOversightActivity`
 
 ```sparql
-PREFIX abo:  <https://w3id.org/abo#>
-PREFIX prov: <http://www.w3.org/ns/prov#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX abo:  [https://w3id.org/abo#](https://w3id.org/abo#)
+PREFIX prov: [http://www.w3.org/ns/prov#](http://www.w3.org/ns/prov#)
+PREFIX rdfs: [http://www.w3.org/2000/01/rdf-schema#](http://www.w3.org/2000/01/rdf-schema#)
+PREFIX xsd:  [http://www.w3.org/2001/XMLSchema#](http://www.w3.org/2001/XMLSchema#)
 
-SELECT DISTINCT ?activity ?modelName ?modelVersion WHERE {
+SELECT DISTINCT ?activity ?recommendationValue ?modelName ?modelVersion WHERE {
   ?activity a abo:HumanOversightActivity ;
             abo:wasOversightOf ?task .
-  ?task abo:hadTaskInformation ?output .
-  ?output prov:wasAttributedTo ?model .
+  ?task abo:hadTaskInformation ?aiOutput .
+  ?aiOutput a abo:AIRecommendation ;
+            abo:hasRecommendationValue ?recommendationValue ;
+            prov:wasAttributedTo ?model .
   ?model a abo:AIModel ;
          abo:hasModelName ?modelName ;
          abo:hasModelVersion ?modelVersion .
 }
-
 ```
-| activity | modelName | modelVersion |
-| :--- | :--- | :--- |
-| [https://w3id.org/abo#OversightActivity_Case1](https://w3id.org/abo#OversightActivity_Case1) | "V1" | "V1" |
-| [https://w3id.org/abo#OversightActivity_Case2](https://w3id.org/abo#OversightActivity_Case2) | "V1" | "V1" |
-| [https://w3id.org/abo#OversightActivity_Case3](https://w3id.org/abo#OversightActivity_Case3) | "V1" | "V1" |
+| activity | recommendationValue | modelName | modelVersion |
+| :--- | :--- | :--- | :--- |
+| [https://w3id.org/abo#OversightActivity_Case1](https://w3id.org/abo#OversightActivity_Case1) | "BI RADS 1" | "V1" | "V1" |
+| [https://w3id.org/abo#OversightActivity_Case2](https://w3id.org/abo#OversightActivity_Case2) | "BI RADS 1" | "V1" | "V1" |
+| [https://w3id.org/abo#OversightActivity_Case3](https://w3id.org/abo#OversightActivity_Case3) | "BI RADS 1" | "V1" | "V1" |
 
 
 ## CQ3: What were the performance metrics of the AI model when the human operator had the same output as the AI model during a human oversight process?
@@ -197,7 +198,26 @@ SELECT ?activity ?oversightDecision ?oversightDecisionNote WHERE {
 | [https://w3id.org/abo#OversightActivity_Case2](https://w3id.org/abo#OversightActivity_Case2) | "BI RADS 4" | "Stereotactic biopsy recommended" |
 | [https://w3id.org/abo#OversightActivity_Case3](https://w3id.org/abo#OversightActivity_Case3) | "BI RADS 4" | "Stereotactic biopsy recommended" |
 
-## CQ10: What was this operator’s level of expertise during this human oversight process?  
+## CQ10: What was this operator’s level of expertise during this human oversight process? 
+```sparql
+PREFIX abo:  [https://w3id.org/abo#](https://w3id.org/abo#)
+PREFIX prov: [http://www.w3.org/ns/prov#](http://www.w3.org/ns/prov#)
+PREFIX rdfs: [http://www.w3.org/2000/01/rdf-schema#](http://www.w3.org/2000/01/rdf-schema#)
+PREFIX xsd:  [http://www.w3.org/2001/XMLSchema#](http://www.w3.org/2001/XMLSchema#)
+
+SELECT ?activity ?experience ?role WHERE {
+  ?activity a abo:HumanOversightActivity ;
+            prov:qualifiedAssociation ?context .
+  ?context abo:hadProfile ?profile .
+  ?profile abo:hasExperience ?experience ;
+           abo:hasRole ?role .
+}
+```
+| activity | experience | role |
+| :--- | :--- | :--- |
+| [https://w3id.org/abo#OversightActivity_Case1](https://w3id.org/abo#OversightActivity_Case1) | "3.0"^^xsd:decimal | "Junior Radiologist" |
+| [https://w3id.org/abo#OversightActivity_Case3](https://w3id.org/abo#OversightActivity_Case3) | "3.0"^^xsd:decimal | "Junior Radiologist" |
+| [https://w3id.org/abo#OversightActivity_Case2](https://w3id.org/abo#OversightActivity_Case2) | "15.0"^^xsd:decimal | "Senior Radiologist" |
 
 ## CQ11: What was this operator’s AI literacy score during this human oversight process?
 
