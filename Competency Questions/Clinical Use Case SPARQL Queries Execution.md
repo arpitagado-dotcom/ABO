@@ -10,7 +10,11 @@ Two performance metrics are tracked for the model:
 | **Interval cancer rate (post-deployment)** | 4.0 per 1,000 screenings | Of every 1,000 women the model clears as negative in real-world use, four are later found to have cancer before their next scheduled screening. This is a live, post-deployment safety signal, and a strong pre-deployment score like AUC-ROC cannot substitute for it: a model can validate well on curated test data and still miss cases once deployed. |
 
 ## Alice's case
-Alice, a patient with  `case ID Alice123` comes in for her screening. Her mammogram shows breast-density  `category  D ` on the  `BI-RADS density scale `. This is known to be extremely dense tissue, a condition already known to reduce diagnostic sensitivity for both human readers and AI systems. AI reader outputs a `BI-RADS 1 assessment` (a "negative" reading, effectively recommending no further action). It accompanies this output with a `SHAP explanation`
+Alice, a patient with  `case ID Alice123` comes in for her screening. Her mammogram shows breast-density  `category  D ` on the  `BI-RADS density scale `. This is known to be extremely dense tissue, a condition already known to reduce diagnostic sensitivity for both human readers and AI systems. AI reader reviews her mammogram outputs a `BI-RADS 1 assessment` (a "negative" reading, effectively recommending no further action). It accompanies this output with a `SHAP explanation`. 
+
+Dr. Bob's review
+Dr Bob is a `junior radiologist` with `three years of experience` and an average understanding of the working and processing of AI systems which makes his `AI literacy score of 6.5 out of 10`. The case first reaches him on the evening of `24 November 2023, 17:37`. His workload for the past hour was high causing his `TTR to reduce by 40%`. 
+He views Alice's mammogram, sees AI reader's 
 
 
 
