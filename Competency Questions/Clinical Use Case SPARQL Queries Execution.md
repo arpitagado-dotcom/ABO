@@ -1,3 +1,15 @@
+# Use Case Description 
+
+## AI model 
+A breast cancer screening service has deployed an AI reader, model V1, to support its radiologists in interpreting mammograms. For every case, the model produces a BI-RADS assessment together with a SHAP-based explanation of that assessment.
+
+Two performance metrics are tracked for the model: 
+| Metric | Description |
+| :--- | :--- |
+| **AUC-ROC (pre-deployment)** | **0.94** — how well the model distinguished malignant from benign cases during validation testing, before it went live. A score of 1.0 would mean perfect discrimination; 0.94 is a strong, but not flawless, result on the test data available at the time. |
+| **Interval cancer rate (post-deployment)** | **4.0 per 1,000 screenings** — of every 1,000 women the model clears as negative in real-world use, four are later found to have cancer before their next scheduled screening. This is a live, post-deployment safety signal, and a strong pre-deployment score like AUC-ROC cannot substitute for it: a model can validate well on curated test data and still miss cases once deployed. |
+
+
 # Competency Questions
 
 The competency questions define the information requirements that guided the development of the Automation Bias Ontology (ABO).
