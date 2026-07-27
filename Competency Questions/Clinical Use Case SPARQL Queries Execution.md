@@ -9,6 +9,10 @@ Two performance metrics are tracked for the model:
 | **AUC-ROC (pre-deployment)** | 0.94 | How well the model distinguished malignant from benign cases during validation testing, before it went live. A score of 1.0 would mean perfect discrimination; 0.94 is a strong, but not flawless, result on the test data available at the time. |
 | **Interval cancer rate (post-deployment)** | 4.0 per 1,000 screenings | Of every 1,000 women the model clears as negative in real-world use, four are later found to have cancer before their next scheduled screening. This is a live, post-deployment safety signal, and a strong pre-deployment score like AUC-ROC cannot substitute for it: a model can validate well on curated test data and still miss cases once deployed. |
 
+## Alice's case
+Alice, a patient with  `case ID Alice123` comes in for her screening. Her mammogram shows breast-density  `category  D ` on the  `BI-RADS density scale `. This is known to be extremely dense tissue, a condition already known to reduce diagnostic sensitivity for both human readers and AI systems. AI reader outputs a `BI-RADS 1 assessment` (a "negative" reading, effectively recommending no further action). It accompanies this output with a `SHAP explanation`
+
+
 
 # Competency Questions
 
