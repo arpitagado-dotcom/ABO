@@ -14,7 +14,10 @@ Alice, a patient with  `case ID Alice123` comes in for her screening. Her mammog
 
 Dr. Bob's review
 Dr Bob is a `junior radiologist` with `three years of experience` and an average understanding of the working and processing of AI systems which makes his `AI literacy score of 6.5 out of 10`. The case first reaches him on the evening of `24 November 2023, 17:37`. His workload for the past hour was high causing his `TTR to reduce by 40%`. 
-He views Alice's mammogram, sees AI reader's 
+He views Alice's mammogram, looks at AI's output that classified her as a low risk case so he accepts AI recommendation, `gives her a BI-RADS 1 assessment, records "Return for scan after a year," `. His viewing of AI recommendation is recorded through `gaze tracking` with `evidence ID EV244`. It was observed he spent `39 seconds` on it and an `overall 2 minutes` on the case. Officially signing off her case at 17:39 and moves on to get through his remaining cases before the end of his shift. 
+
+Dr. Jay's review
+Alice's case goes to a second reader, 
 
 
 
